@@ -1,0 +1,343 @@
+openapi: 3.0.3
+info:
+  title: 'Braine Trust Api'
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/v1/clubs:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: 'Gets a list of clubs'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      name: Nostradam
+                      address: 'Avenue de la Paix'
+                      contact: '0494548798'
+                      location: Anderlecht
+                      description: 'Club de scrabble située dans le quartier de Bruxelles'
+                      created_at: '2023-03-19T19:34:00.000000Z'
+                      updated_at: '2023-03-19T20:00:26.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: Nostradam
+                        address: 'Avenue de la Paix'
+                        contact: '0494548798'
+                        location: Anderlecht
+                        description: 'Club de scrabble située dans le quartier de Bruxelles'
+                        created_at: '2023-03-19T19:34:00.000000Z'
+                        updated_at: '2023-03-19T20:00:26.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: Nostradam
+                        address:
+                          type: string
+                          example: 'Avenue de la Paix'
+                        contact:
+                          type: string
+                          example: '0494548798'
+                        location:
+                          type: string
+                          example: Anderlecht
+                        description:
+                          type: string
+                          example: 'Club de scrabble située dans le quartier de Bruxelles'
+                        created_at:
+                          type: string
+                          example: '2023-03-19T19:34:00.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2023-03-19T20:00:26.000000Z'
+      tags:
+        - 'Club Resource'
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Club Resource'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: yyjfusfjhqxusyzcjhrhxtsunsyjpaxznltqklkqaodvzjiswczp
+                address:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: akreqwkuselyawjafyzdpvepotwsmyfzqmxlsydltzoxxdwua
+                contact:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: esuahjftunwtjizzkummtrlsxqekestkxoaizwxqea
+                location:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: ovozamksugqaswjlermlpjxvjbpblteekpfeograakfutqibohvrz
+                description:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: 'Debitis voluptas voluptates aliquam ut rerum optio ad.'
+              required:
+                - name
+                - address
+                - contact
+                - location
+      security: []
+  '/api/v1/clubs/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: Nostradam
+                    address: 'Avenue de la Paix'
+                    contact: '0494548798'
+                    location: Anderlecht
+                    description: 'Club de scrabble située dans le quartier de Bruxelles'
+                    created_at: '2023-03-19T19:34:00.000000Z'
+                    updated_at: '2023-03-19T20:00:26.000000Z'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: Nostradam
+                      address:
+                        type: string
+                        example: 'Avenue de la Paix'
+                      contact:
+                        type: string
+                        example: '0494548798'
+                      location:
+                        type: string
+                        example: Anderlecht
+                      description:
+                        type: string
+                        example: 'Club de scrabble située dans le quartier de Bruxelles'
+                      created_at:
+                        type: string
+                        example: '2023-03-19T19:34:00.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2023-03-19T20:00:26.000000Z'
+      tags:
+        - 'Club Resource'
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Club Resource'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: cpywqznmeadfcbpthzuiliqmuvqlztvkzucetmrsvcmzbzcfgsgzhbogkgnbbkiepausxnqbqclfmtswcihswhkm
+                address:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: ocsjwneauehejj
+                contact:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: lpihbaatzlfdfwdulunlrzzbswtjgaoczuwxxykvjalgzkiadonawaeulqgwamnixgpfkkjpmlxjovsqws
+                location:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: lfmzwybeiuqtfrfxrbwtxh
+                description:
+                  type: string
+                  description: 'Must be at least 4 characters.'
+                  example: 'Eos nam quas et assumenda et.'
+              required:
+                - name
+                - address
+                - contact
+                - location
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Club Resource'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the club.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: 'Club Resource'
+    description: 'APIs to manage Club model data resource'
+  -
+    name: Endpoints
+    description: ''

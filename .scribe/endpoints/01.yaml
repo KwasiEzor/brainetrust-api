@@ -1,0 +1,280 @@
+name: 'Club Resource'
+description: 'APIs to manage Club model data resource'
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/clubs
+    metadata:
+      groupName: 'Club Resource'
+      groupDescription: 'APIs to manage Club model data resource'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: 'Gets a list of clubs'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"name":"Nostradam","address":"Avenue de la Paix","contact":"0494548798","location":"Anderlecht","description":"Club de scrabble situ\u00e9e dans le quartier de Bruxelles","created_at":"2023-03-19T19:34:00.000000Z","updated_at":"2023-03-19T20:00:26.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/clubs
+    metadata:
+      groupName: 'Club Resource'
+      groupDescription: 'APIs to manage Club model data resource'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must be at least 4 characters.'
+        required: true
+        example: yyjfusfjhqxusyzcjhrhxtsunsyjpaxznltqklkqaodvzjiswczp
+        type: string
+        custom: []
+      address:
+        name: address
+        description: 'Must be at least 4 characters.'
+        required: true
+        example: akreqwkuselyawjafyzdpvepotwsmyfzqmxlsydltzoxxdwua
+        type: string
+        custom: []
+      contact:
+        name: contact
+        description: 'Must be at least 4 characters.'
+        required: true
+        example: esuahjftunwtjizzkummtrlsxqekestkxoaizwxqea
+        type: string
+        custom: []
+      location:
+        name: location
+        description: 'Must be at least 4 characters.'
+        required: true
+        example: ovozamksugqaswjlermlpjxvjbpblteekpfeograakfutqibohvrz
+        type: string
+        custom: []
+      description:
+        name: description
+        description: 'Must be at least 4 characters.'
+        required: false
+        example: 'Debitis voluptas voluptates aliquam ut rerum optio ad.'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: yyjfusfjhqxusyzcjhrhxtsunsyjpaxznltqklkqaodvzjiswczp
+      address: akreqwkuselyawjafyzdpvepotwsmyfzqmxlsydltzoxxdwua
+      contact: esuahjftunwtjizzkummtrlsxqekestkxoaizwxqea
+      location: ovozamksugqaswjlermlpjxvjbpblteekpfeograakfutqibohvrz
+      description: 'Debitis voluptas voluptates aliquam ut rerum optio ad.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/clubs/{id}'
+    metadata:
+      groupName: 'Club Resource'
+      groupDescription: 'APIs to manage Club model data resource'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the club.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":1,"name":"Nostradam","address":"Avenue de la Paix","contact":"0494548798","location":"Anderlecht","description":"Club de scrabble situ\u00e9e dans le quartier de Bruxelles","created_at":"2023-03-19T19:34:00.000000Z","updated_at":"2023-03-19T20:00:26.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/clubs/{id}'
+    metadata:
+      groupName: 'Club Resource'
+      groupDescription: 'APIs to manage Club model data resource'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the club.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must be at least 4 characters.'
+        required: true
+        example: cpywqznmeadfcbpthzuiliqmuvqlztvkzucetmrsvcmzbzcfgsgzhbogkgnbbkiepausxnqbqclfmtswcihswhkm
+        type: string
+        custom: []
+      address:
+        name: address
+        description: 'Must be at least 4 characters.'
+        required: true
+        example: ocsjwneauehejj
+        type: string
+        custom: []
+      contact:
+        name: contact
+        description: 'Must be at least 4 characters.'
+        required: true
+        example: lpihbaatzlfdfwdulunlrzzbswtjgaoczuwxxykvjalgzkiadonawaeulqgwamnixgpfkkjpmlxjovsqws
+        type: string
+        custom: []
+      location:
+        name: location
+        description: 'Must be at least 4 characters.'
+        required: true
+        example: lfmzwybeiuqtfrfxrbwtxh
+        type: string
+        custom: []
+      description:
+        name: description
+        description: 'Must be at least 4 characters.'
+        required: false
+        example: 'Eos nam quas et assumenda et.'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: cpywqznmeadfcbpthzuiliqmuvqlztvkzucetmrsvcmzbzcfgsgzhbogkgnbbkiepausxnqbqclfmtswcihswhkm
+      address: ocsjwneauehejj
+      contact: lpihbaatzlfdfwdulunlrzzbswtjgaoczuwxxykvjalgzkiadonawaeulqgwamnixgpfkkjpmlxjovsqws
+      location: lfmzwybeiuqtfrfxrbwtxh
+      description: 'Eos nam quas et assumenda et.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/clubs/{id}'
+    metadata:
+      groupName: 'Club Resource'
+      groupDescription: 'APIs to manage Club model data resource'
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the club.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
