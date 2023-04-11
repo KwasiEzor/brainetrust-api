@@ -1,0 +1,49 @@
+{
+    "data":[
+        {
+            "id": 1,
+            "name": "Partie Attributive de Points (PAP)",
+            "club_id": null,
+            "competition_type_id": 1,
+            "start_date": "",
+            "end_date": "",
+            "details": ""
+        },
+        {
+            "id": 2,
+            "name": "Tournoi Régional Attributif de Points (TRAP)",
+            "club_id": null,
+            "competition_type_id": 1,
+            "start_date": "",
+            "end_date": "",
+            "details": ""
+        },
+        {
+            "id": 3,
+            "name": "Tournoi Homologué (TH)",
+            "club_id": null,
+            "competition_type_id": 1,
+            "start_date": "",
+            "end_date": "",
+            "details": ""
+        },
+        {
+            "id": 4,
+            "name": "Festival",
+            "club_id": null,
+            "competition_type_id": 1,
+            "start_date": "",
+            "end_date": "",
+            "details": ""
+        },
+        {
+            "id": 5,
+            "name": "Simultanée",
+            "club_id": null,
+            "competition_type_id": 1,
+            "start_date": "",
+            "end_date": "",
+            "details": ""
+        }
+    ]
+}

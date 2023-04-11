@@ -11,9 +11,9 @@ class GameRound extends Model
     protected $fillable=[
         'selected_letters',
         'place_reference',
-        'score',
         'solution',
+        'score',
+        'comments',
         'game_id',
-        'game_round_number'
     ];
 }

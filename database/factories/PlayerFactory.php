@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class PlayerFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'affiliation_number'=>$this->faker->numberBetween(10000,99999),
+            //'user_id'=>User::inRandomOrder()->first()->id,
+            'club_id'=>7,
+            'details'=>$this->faker->realTextBetween(150,200)
         ];
     }
 }

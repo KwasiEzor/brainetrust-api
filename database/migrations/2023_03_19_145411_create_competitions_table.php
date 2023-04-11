@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('competitions', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('club_id')->constrained();
-            $table->foreignId('competition_type_id')->constrained();
+            $table->foreignIdFor(\App\Models\Club::class)->nullable();
+            $table->foreignIdFor(\App\Models\CompetitionType::class)->nullable();
             $table->datetime('start_date');
             $table->datetime('end_date');
             $table->text('details')->nullable();

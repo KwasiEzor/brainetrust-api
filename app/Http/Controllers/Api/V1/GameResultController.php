@@ -3,20 +3,26 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\GameResultResource;
+use App\Http\Resources\GameResultResourceCollection;
 use App\Models\GameResult;
 use App\Http\Requests\StoreGameResultRequest;
 use App\Http\Requests\UpdateGameResultRequest;
+use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Http\Response;
 
 class GameResultController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return ResourceCollection
      */
-    public function index()
+    public function index():ResourceCollection
     {
-        //
+        $results = GameResult::query()
+                    ->paginate();
+        return GameResultResource::collection($results);
     }
 
     /**

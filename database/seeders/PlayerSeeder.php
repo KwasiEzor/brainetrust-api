@@ -14,6 +14,6 @@ class PlayerSeeder extends Seeder
      */
     public function run()
     {
-        //
+
     }
 }

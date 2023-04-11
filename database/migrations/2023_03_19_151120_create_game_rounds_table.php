@@ -17,11 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('selected_letters');
             $table->string('place_reference');
-            $table->integer('score')->unsigned();
             $table->string('solution');
-            $table->longText('comment');
-            $table->foreignId('game_id')->constrained();
-            $table->integer('game_round_number');
+            $table->integer('score')->unsigned();
+            $table->longText('comments');
+            $table->foreignIdFor(\App\Models\Game::class);
             $table->timestamps();
         });
     }

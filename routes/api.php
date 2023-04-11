@@ -35,4 +35,10 @@ Route::group(
     ,function (){
     Route::apiResource('clubs',\App\Http\Controllers\Api\V1\ClubController::class);
     Route::apiResource('users',\App\Http\Controllers\Api\V1\UserController::class)->only(['index','show']);
+    Route::apiResource('competitions',\App\Http\Controllers\Api\V1\CompetitionController::class);
+    Route::apiResource('games',\App\Http\Controllers\Api\V1\GameController::class);
+    Route::apiResource('game-rounds',\App\Http\Controllers\Api\V1\GameRoundController::class);
+    Route::apiResource('game-results',\App\Http\Controllers\Api\V1\GameResultController::class);
+    Route::apiResource('players',\App\Http\Controllers\Api\V1\PlayerController::class);
+    Route::apiResource('player-round-results',\App\Http\Controllers\Api\V1\PlayerRoundResultController::class);
 });

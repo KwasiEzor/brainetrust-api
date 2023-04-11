@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\GameRoundResourceCollection;
 use App\Models\GameRound;
 use App\Http\Requests\StoreGameRoundRequest;
 use App\Http\Requests\UpdateGameRoundRequest;
@@ -12,11 +13,13 @@ class GameRoundController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return GameRoundResourceCollection
      */
-    public function index()
+    public function index(): GameRoundResourceCollection
     {
-        //
+        $gameRounds = GameRound::query()
+            ->paginate(24);
+        return GameRoundResourceCollection::make($gameRounds);
     }
 
     /**

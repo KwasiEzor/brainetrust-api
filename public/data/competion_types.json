@@ -1,0 +1,12 @@
+{
+    "data":[
+        {
+            "name": "Duplicate",
+            "description": "Le Scrabble Duplicate est une variante du jeu de Scrabble dans laquelle tous les joueurs utilisent les mêmes lettres pour former leurs mots. Contrairement au jeu de Scrabble traditionnel, où chaque joueur a son propre plateau de jeu et ses propres lettres, dans le Scrabble Duplicate, tous les joueurs ont accès aux mêmes lettres et doivent donc rivaliser pour trouver les meilleurs mots possibles.\n\nLe jeu se joue en plusieurs manches et chaque joueur reçoit un certain nombre de lettres à chaque manche. Tous les joueurs doivent alors utiliser ces lettres pour former des mots sur un plateau de jeu commun. À la fin de chaque manche, les mots sont comparés et les joueurs reçoivent des points en fonction de la longueur et de la complexité de leurs mots. Le joueur avec le plus de points à la fin du jeu est déclaré vainqueur.\n\nLe Scrabble Duplicate est souvent utilisé dans les tournois de Scrabble et est considéré comme un test plus juste des compétences en matière de Scrabble, car tous les joueurs ont les mêmes opportunités de jouer avec les mêmes lettres."
+        },
+        {
+            "name": "Classique",
+            "description": "Le Scrabble classique est la version traditionnelle et la plus répandue du jeu de Scrabble. Dans cette version, chaque joueur dispose d'un plateau de jeu personnel et d'un lot de lettres individuelles. Le but du jeu est de former des mots en utilisant les lettres qui sont à la disposition du joueur et de les placer sur le plateau de jeu pour marquer des points.\n\nLe plateau de jeu est divisé en cases carrées qui sont chacune marquées d'une valeur en points, allant de 1 à 10. Certaines cases sont également marquées de bonus, telles que les cases \"mot compte double\", \"mot compte triple\", \"lettre compte double\" et \"lettre compte triple\", qui multiplient la valeur des lettres ou des mots qui y sont placés.\n\nLe joueur qui réussit à former le mot le plus long et le plus complexe sur le plateau de jeu tout en utilisant toutes ses lettres et en tirant le meilleur parti des cases bonus remporte le jeu. Le Scrabble classique est un jeu de société très populaire dans le monde entier, joué par des joueurs de tous âges et niveaux de compétence"
+        }
+    ]
+}

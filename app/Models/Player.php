@@ -27,4 +27,14 @@ class Player extends Model
         return  $this->belongsTo(FinalGameResult::class);
     }
 
+    public function user():BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function game_results():HasMany
+    {
+        return $this->hasMany(GameResult::class);
+    }
+
 }

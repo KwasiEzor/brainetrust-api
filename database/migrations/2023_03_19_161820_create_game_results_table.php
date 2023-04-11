@@ -15,9 +15,12 @@ return new class extends Migration
     {
         Schema::create('game_results', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('game_id')->constrained();
-            $table->foreignId('player_id')->constrained();
-            $table->integer('score');
+            $table->integer('ranking_position')->unsigned();
+            $table->integer('player_top');
+            $table->integer('game_top');
+            $table->decimal('percentage',5,2);
+            $table->foreignIdFor(\App\Models\Game::class);
+            $table->foreignIdFor(\App\Models\Player::class);
             $table->timestamps();
         });
     }
