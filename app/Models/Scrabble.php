@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class CompetitionType extends Model
+class Scrabble extends Model
 {
     use HasFactory;
     protected $fillable=[
@@ -14,8 +14,8 @@ class CompetitionType extends Model
         'description',
     ];
 
-    public function competitions():HasMany
+    public function scrabble_types():HasMany
     {
-        return $this->hasMany(Competition::class);
+        return $this->hasMany(ScrabbleType::class);
     }
 }

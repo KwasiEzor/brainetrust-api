@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('games', function (Blueprint $table) {
+        Schema::create('scrabble_types', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Competition::class);
-            $table->foreignIdFor(\App\Models\GameResult::class);
-            $table->integer('round_number');
+            $table->foreignIdFor(\App\Models\ScrabbleType::class);
+            $table->string('name');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('games');
+        Schema::dropIfExists('scrabble_types');
     }
 };

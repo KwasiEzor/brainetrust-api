@@ -17,7 +17,9 @@ class CompetitionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'start_date'=>$this->faker->dateTime(now(),'europe/brussels'),
+            'end_date'=>$this->faker->dateTime(now(),'europe/brussels'),
+            'details'=>$this->faker->realText()
         ];
     }
 }

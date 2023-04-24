@@ -12,6 +12,7 @@ class Game extends Model
     use HasFactory;
     protected $fillable=[
         'competition_id',
+        'game_result_id',
         'round_number'
     ];
 
@@ -23,5 +24,9 @@ class Game extends Model
     public function gameResults():HasMany
     {
         return $this->hasMany(GameResult::class);
+    }
+    public function gameRounds():HasMany
+    {
+        return $this->hasMany(GameRound::class);
     }
 }

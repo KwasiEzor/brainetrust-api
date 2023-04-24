@@ -3,24 +3,22 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\CompetitionResource;
-use App\Http\Resources\CompetitionResourceCollection;
-use App\Models\Competition;
-use App\Http\Requests\StoreCompetitionRequest;
-use App\Http\Requests\UpdateCompetitionRequest;
+use App\Http\Resources\ScrabbleResource;
+use App\Models\Scrabble;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class CompetitionController extends Controller
+class ScrabbleController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return ResourceCollection
      */
-    public function index():ResourceCollection
+    public function index(): ResourceCollection
     {
-        $competitions = Competition::all();
-        return CompetitionResource::collection($competitions);
+        $scrabbles = Scrabble::all();
+        return ScrabbleResource::collection($scrabbles);
     }
 
     /**
@@ -36,10 +34,10 @@ class CompetitionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCompetitionRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCompetitionRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -47,10 +45,10 @@ class CompetitionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Competition  $competition
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Competition $competition)
+    public function show($id)
     {
         //
     }
@@ -58,10 +56,10 @@ class CompetitionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Competition  $competition
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Competition $competition)
+    public function edit($id)
     {
         //
     }
@@ -69,11 +67,11 @@ class CompetitionController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCompetitionRequest  $request
-     * @param  \App\Models\Competition  $competition
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCompetitionRequest $request, Competition $competition)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -81,10 +79,10 @@ class CompetitionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Competition  $competition
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Competition $competition)
+    public function destroy($id)
     {
         //
     }
